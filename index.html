@@ -1,0 +1,1568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jayaprakash V - Data Analyst</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header Styles */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 5%;
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #2c3e50;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin: 0 1rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #3498db;
+        }
+
+        #menu-icon {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .visit-btn {
+            background-color: #3498db;
+            color: white;
+            padding: 0.7rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+
+        .visit-btn:hover {
+            background-color: #2980b9;
+        }
+
+        /* About Section */
+        .about {
+            padding: 8rem 5% 5rem;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+
+        .about-container {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .profile-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .profile-image img {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border: 5px solid #3498db;
+        }
+
+        .info-box {
+            flex: 2;
+        }
+
+        .text h3 {
+            font-size: 1.5rem;
+            color: #7f8c8d;
+            margin-bottom: 0.5rem;
+        }
+
+        .text h1 {
+            font-size: 3rem;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        .text span {
+            font-size: 1.2rem;
+            color: #3498db;
+            font-weight: 500;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .btn a {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+
+        .btn a:hover {
+            background-color: #2980b9;
+        }
+
+        .socials {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .socials a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: #2c3e50;
+            color: white;
+            border-radius: 50%;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .socials a:hover {
+            background-color: #3498db;
+        }
+
+        .education h2 {
+            font-size: 1.8rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .education p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        /* Areas of Interest Section */
+        .interests {
+            padding: 5rem 5%;
+            background-color: white;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: #3498db;
+        }
+
+        .interests-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .interest-card {
+            background-color: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .interest-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .interest-icon {
+            font-size: 3rem;
+            color: #3498db;
+            margin-bottom: 1.5rem;
+        }
+
+        .interest-card h3 {
+            font-size: 1.5rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .interest-card p {
+            color: #7f8c8d;
+            line-height: 1.6;
+        }
+
+        /* Skills Section */
+        .skills-section {
+            padding: 5rem 5%;
+            background-color: #f8f9fa;
+        }
+
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .skill-item {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .skill-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .skill-icon {
+            font-size: 2.5rem;
+            color: #3498db;
+            margin-bottom: 1rem;
+        }
+
+        .skill-name {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        .skill-level {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+            margin-bottom: 1rem;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background-color: #e0e0e0;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            border-radius: 4px;
+        }
+
+        .progress-fill.expert {
+            width: 95%;
+            background-color: #2ecc71;
+        }
+
+        .progress-fill.advanced {
+            width: 80%;
+            background-color: #3498db;
+        }
+
+        .progress-fill.intermediate {
+            width: 65%;
+            background-color: #f39c12;
+        }
+
+        /* Experience Section */
+        .experience {
+            padding: 5rem 5%;
+            background-color: white;
+        }
+
+        .experience-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .experience-item {
+            margin-bottom: 3rem;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            background-color: #f8f9fa;
+            transition: transform 0.3s;
+            position: relative;
+        }
+
+        .experience-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .experience-header h3 {
+            font-size: 1.5rem;
+            color: #2c3e50;
+        }
+
+        .company {
+            font-weight: 500;
+            color: #3498db;
+        }
+
+        .duration {
+            background-color: #3498db;
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        .experience-image {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            width: 60px;
+            height: 60px;
+            background-color: #3498db;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .responsibilities {
+            list-style-type: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .responsibilities li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .responsibilities li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: #3498db;
+        }
+
+        .tech-stack {
+            margin-top: 1rem;
+            padding: 1rem;
+            background-color: #f1f8ff;
+            border-radius: 5px;
+            border-left: 4px solid #3498db;
+        }
+
+        .learning-details {
+            margin-top: 1.5rem;
+            padding: 1.5rem;
+            background-color: #fff8e1;
+            border-radius: 5px;
+            border-left: 4px solid #f39c12;
+        }
+
+        /* Education Section */
+        .education-section {
+            padding: 5rem 5%;
+            background-color: #f8f9fa;
+        }
+
+        .education-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .education-card {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+            position: relative;
+        }
+
+        .education-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .education-icon {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            width: 50px;
+            height: 50px;
+            background-color: #3498db;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        .education-card h3 {
+            font-size: 1.5rem;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        .education-card p {
+            margin-bottom: 0.5rem;
+            color: #7f8c8d;
+        }
+
+        .education-card ul {
+            list-style-type: none;
+            margin-top: 1rem;
+        }
+
+        .education-card li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .education-card li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: #3498db;
+        }
+
+        /* Projects Section */
+        .project {
+            padding: 5rem 5%;
+            background-color: white;
+        }
+
+        .project-item {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+        }
+
+        .project-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-image-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .project-icon {
+            width: 100px;
+            height: 100px;
+            background-color: #3498db;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2.5rem;
+        }
+
+        .project-details {
+            flex: 3;
+        }
+
+        .project-details h3 {
+            font-size: 1.5rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .project-details p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .project-link {
+            display: inline-block;
+            padding: 0.7rem 1.5rem;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+
+        .project-link:hover {
+            background-color: #2980b9;
+        }
+
+        /* Achievements Section */
+        .achievements {
+            padding: 5rem 5%;
+            background-color: #f8f9fa;
+        }
+
+        .achievement-item {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+        }
+
+        .achievement-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .achievement-icon {
+            width: 70px;
+            height: 70px;
+            background-color: #3498db;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.8rem;
+            flex-shrink: 0;
+        }
+
+        .achievement-text h3 {
+            font-size: 1.3rem;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        .achievement-text p {
+            color: #7f8c8d;
+            margin-bottom: 0.5rem;
+        }
+
+        .achievement-date {
+            font-size: 0.9rem;
+            color: #3498db;
+            font-weight: 500;
+        }
+
+        /* Gallery Section */
+        .gallery {
+            padding: 5rem 5%;
+            background-color: white;
+        }
+
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto 2rem;
+        }
+
+        .gallery-item {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .gallery-placeholder {
+            text-align: center;
+            color: #7f8c8d;
+        }
+
+        .gallery-placeholder i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #3498db;
+        }
+
+        .more-images {
+            display: none;
+        }
+
+        .show-more-btn {
+            display: block;
+            margin: 0 auto;
+            padding: 0.8rem 1.5rem;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .show-more-btn:hover {
+            background-color: #2980b9;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 5rem 5%;
+            background-color: #f8f9fa;
+            text-align: center;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            padding: 1.5rem;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+        }
+
+        .contact-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .contact-item i {
+            width: 60px;
+            height: 60px;
+            background-color: #3498db;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .contact-details h3 {
+            font-size: 1.2rem;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+            text-align: left;
+        }
+
+        .contact-details p {
+            color: #7f8c8d;
+            text-align: left;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto 3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: #3498db;
+        }
+
+        .contact-form textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            padding: 1rem;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: #2980b9;
+        }
+
+        .contact .socials {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .about-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .profile-image {
+                margin-bottom: 2rem;
+            }
+            
+            .project-item {
+                flex-direction: column;
+            }
+            
+            .achievement-item {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .contact-item {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .contact-details h3,
+            .contact-details p {
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                padding: 1rem 5%;
+            }
+            
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                flex-direction: column;
+                padding: 1rem 0;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .nav-links li {
+                margin: 0.5rem 0;
+                text-align: center;
+            }
+            
+            #menu-icon {
+                display: block;
+            }
+            
+            .visit-btn {
+                display: none;
+            }
+            
+            .text h1 {
+                font-size: 2.5rem;
+            }
+            
+            .experience-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+            
+            .education-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .interests-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .about {
+                padding: 6rem 5% 3rem;
+            }
+            
+            .text h1 {
+                font-size: 2rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .btn-group {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+            
+            .btn a {
+                display: block;
+                width: 100%;
+            }
+            
+            .skills-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .gallery-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo"><span>JAYAPRAKASH V</span></a>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#interests">Interests</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#project">Projects</a></li>
+            <li><a href="#achievements">Achievements</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <i class="fa-solid fa-bars" id="menu-icon"></i>
+        <a href="https://github.com/jayaprakash7903" target="_blank" class="visit-btn">Visit GitHub</a>
+    </header>
+
+    <section id="about" class="about">
+        <div class="about-container">
+            <div class="profile-image">
+                <img src="jp.jpg" alt="Jayaprakash V">
+            </div>
+            <div class="info-box">
+                <div class="text">
+                    <h3>Hi, I'm</h3>
+                    <h1>JAYAPRAKASH V</h1>
+                    <span>DATA ANALYST</span>
+                </div>
+                <div class="btn-group">
+                    <div class="btn">
+                        <a href="https://drive.google.com/file/d/1QedTVVACnxQLznmA3PjdYcOD5U9Xo2RZ/view?usp=sharing" target="_blank" download>Download CV</a>
+                    </div>
+                    <div class="btn">
+                        <a href="mailto:jayaprakashvelmurugan111@gmail.com">Contact</a>
+                    </div>
+                </div>
+                <div class="socials">
+                    <a href="https://github.com/jayaprakash7903" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/jayaprakash-v-33913a289/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <div class="education">
+                    <h2>About Me</h2>
+                    <p>
+                        I am currently working as a <strong>Manufacturing & Projects Analyst at FLSmidth</strong>, where I leverage my expertise in data analytics, automation, and business intelligence to drive operational excellence and strategic decision-making.<br><br>
+                        I have completed my <strong>MBA in AI & Data Science</strong> from SRM University with <strong>92%</strong>, building a strong foundation in Python, R, SQL, machine learning, and advanced analytics.<br><br>
+                        My journey includes hands-on experience in process automation, dashboard development, and delivering actionable insights across manufacturing and business functions.<br><br>
+                        I have also excelled in national and international competitions, securing <strong>2nd place at the IITM Data Analytics Hackathon</strong> and being <strong>runner-up at TechnoVIT's Datathon</strong>.<br><br>
+                        With proficiency in Power BI, Tableau, and advanced Excel, I am passionate about transforming data into strategic success.<br><br>
+                        Let's connect to turn data into impact!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="interests" class="interests">
+        <h2 class="section-title">Areas of Interest</h2>
+        <div class="interests-container">
+            <div class="interest-card">
+                <div class="interest-icon">
+                    <i class="fas fa-chart-bar"></i>
+                </div>
+                <h3>Data Analytics & Visualization</h3>
+                <p>Transforming raw data into meaningful insights through advanced analytics and creating compelling visualizations to drive business decisions.</p>
+            </div>
+            <div class="interest-card">
+                <div class="interest-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h3>Machine Learning</h3>
+                <p>Developing predictive models and algorithms to solve complex business problems and automate decision-making processes.</p>
+            </div>
+            <div class="interest-card">
+                <div class="interest-icon">
+                    <i class="fas fa-network-wired"></i>
+                </div>
+                <h3>Deep Learning</h3>
+                <p>Exploring neural networks and advanced AI techniques for image recognition, natural language processing, and complex pattern recognition.</p>
+            </div>
+            <div class="interest-card">
+                <div class="interest-icon">
+                    <i class="fas fa-trophy"></i>
+                </div>
+                <h3>Hackathons & Competitions</h3>
+                <p>Participating in data science competitions to solve real-world challenges and continuously improve technical skills.</p>
+            </div>
+            <div class="interest-card">
+                <div class="interest-icon">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <h3>Automation</h3>
+                <p>Creating automated workflows and processes to improve efficiency, reduce manual effort, and minimize errors in business operations.</p>
+            </div>
+            <div class="interest-card">
+                <div class="interest-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3>Demand Forecasting</h3>
+                <p>Developing accurate forecasting models to optimize inventory management, production planning, and resource allocation.</p>
+            </div>
+            <div class="interest-card">
+                <div class="interest-icon">
+                    <i class="fas fa-language"></i>
+                </div>
+                <h3>Natural Language Processing</h3>
+                <p>Applying NLP techniques to extract insights from text data, sentiment analysis, and building intelligent chatbots.</p>
+            </div>
+            <div class="interest-card">
+                <div class="interest-icon">
+                    <i class="fas fa-search"></i>
+                </div>
+                <h3>Predictive Analytics</h3>
+                <p>Using statistical techniques and machine learning to identify future trends, behaviors, and outcomes based on historical data.</p>
+            </div>
+            <div class="interest-card">
+                <div class="interest-icon">
+                    <i class="fas fa-chart-pie"></i>
+                </div>
+                <h3>Statistical Analysis</h3>
+                <p>Applying statistical methods to analyze data, test hypotheses, and derive meaningful conclusions for business strategy.</p>
+            </div>
+            <div class="interest-card">
+                <div class="interest-icon">
+                    <i class="fas fa-lightbulb"></i>
+                </div>
+                <h3>Business Intelligence</h3>
+                <p>Developing comprehensive BI solutions to support data-driven decision-making across organizational functions.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills-section">
+        <h2 class="section-title">My Skills and Tools</h2>
+        <div class="skills-container">
+            <div class="skill-item">
+                <div class="skill-icon"><i class="fab fa-python"></i></div>
+                <div class="skill-name">Python</div>
+                <div class="skill-level">Expert</div>
+                <div class="progress-bar">
+                    <div class="progress-fill expert"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-icon"><i class="fas fa-database"></i></div>
+                <div class="skill-name">SQL</div>
+                <div class="skill-level">Expert</div>
+                <div class="progress-bar">
+                    <div class="progress-fill expert"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-icon"><i class="fas fa-file-excel"></i></div>
+                <div class="skill-name">Excel</div>
+                <div class="skill-level">Advanced</div>
+                <div class="progress-bar">
+                    <div class="progress-fill advanced"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-icon"><i class="fas fa-code"></i></div>
+                <div class="skill-name">VBA</div>
+                <div class="skill-level">Intermediate</div>
+                <div class="progress-bar">
+                    <div class="progress-fill intermediate"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-icon"><i class="fas fa-chart-bar"></i></div>
+                <div class="skill-name">Power BI</div>
+                <div class="skill-level">Advanced</div>
+                <div class="progress-bar">
+                    <div class="progress-fill advanced"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-icon"><i class="fas fa-chart-pie"></i></div>
+                <div class="skill-name">Tableau</div>
+                <div class="skill-level">Advanced</div>
+                <div class="progress-bar">
+                    <div class="progress-fill advanced"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-icon"><i class="fas fa-robot"></i></div>
+                <div class="skill-name">Power Automate</div>
+                <div class="skill-level">Intermediate</div>
+                <div class="progress-bar">
+                    <div class="progress-fill intermediate"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-icon"><i class="fab fa-r-project"></i></div>
+                <div class="skill-name">R</div>
+                <div class="skill-level">Intermediate</div>
+                <div class="progress-bar">
+                    <div class="progress-fill intermediate"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-icon"><i class="fas fa-table"></i></div>
+                <div class="skill-name">Google Sheets</div>
+                <div class="skill-level">Intermediate</div>
+                <div class="progress-bar">
+                    <div class="progress-fill intermediate"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-icon"><i class="fas fa-desktop"></i></div>
+                <div class="skill-name">MS Office</div>
+                <div class="skill-level">Advanced</div>
+                <div class="progress-bar">
+                    <div class="progress-fill advanced"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-icon"><i class="fas fa-brain"></i></div>
+                <div class="skill-name">Machine Learning</div>
+                <div class="skill-level">Expert</div>
+                <div class="progress-bar">
+                    <div class="progress-fill expert"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-icon"><i class="fas fa-language"></i></div>
+                <div class="skill-name">NLP</div>
+                <div class="skill-level">Intermediate</div>
+                <div class="progress-bar">
+                    <div class="progress-fill intermediate"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-icon"><i class="fas fa-network-wired"></i></div>
+                <div class="skill-name">Deep Learning</div>
+                <div class="skill-level">Intermediate</div>
+                <div class="progress-bar">
+                    <div class="progress-fill intermediate"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-icon"><i class="fas fa-chart-line"></i></div>
+                <div class="skill-name">Statistics</div>
+                <div class="skill-level">Advanced</div>
+                <div class="progress-bar">
+                    <div class="progress-fill advanced"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="experience">
+        <h2 class="section-title">Experience</h2>
+        <div class="experience-content">
+            <div class="experience-item">
+                <div class="experience-header">
+                    <h3>Manufacturing & Projects Analyst</h3>
+                    <span class="company">FLSmidth</span>
+                    <span class="duration">June 2025 – Present</span>
+                </div>
+                <div class="experience-image">
+                    <i class="fas fa-industry"></i>
+                </div>
+                <ul class="responsibilities">
+                    <li>Designed and implemented Power BI dashboards, SQL-connected reports, and automation tools to improve real-time visibility and decision-making across manufacturing, procurement, and quality functions.</li>
+                    <li>Developed and streamlined end-to-end financial reporting solutions (Project Cost Report, Capex Dashboard, Purchase Order Tracking, etc.), enhancing transparency and operational efficiency.</li>
+                    <li>Automated manual processes such as meeting minutes, inspection notifications, maintenance tracking, and costing, reducing errors and saving significant time.</li>
+                    <li>Collaborated with cross-functional teams to identify pain points, design solutions, and deliver actionable insights, improving accountability, compliance, and productivity.</li>
+                    <li>Created a centralized report register and workspace for manufacturing data, ensuring consistency, faster access, and data-driven decision-making across departments.</li>
+                </ul>
+                <div class="tech-stack">
+                    <strong>Tech Stack:</strong> Power BI | Python | SQL | D365 | Excel | Power Automate | Excel VBA | Power Apps | Power Query | DAX
+                </div>
+            </div>
+            
+            <div class="experience-item">
+                <div class="experience-header">
+                    <h3>Data Analyst</h3>
+                    <span class="company">FLSmidth</span>
+                    <span class="duration">Feb 2025 – Jun 2025</span>
+                </div>
+                <div class="experience-image">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <ul class="responsibilities">
+                    <li>Built and deployed Power BI dashboards for KPIs, Capex, Quality Orders, and Maintenance tracking.</li>
+                    <li>Created monitoring apps (e.g., Air Compressor, Forklift, Hydra) to improve equipment tracking and real-time visibility.</li>
+                    <li>Supported multiple departments (Production, Quality, Logistics) by delivering actionable data insights.</li>
+                </ul>
+                <div class="tech-stack">
+                    <strong>Tech Stack:</strong> Power BI | Python | SQL | D365 | Excel | Power Automate | Excel VBA | Power Apps
+                </div>
+            </div>
+            
+            <div class="experience-item">
+                <div class="experience-header">
+                    <h3>Data Analyst Intern</h3>
+                    <span class="company">XCMG India</span>
+                    <span class="duration">Jun 2024 – Aug 2024</span>
+                </div>
+                <div class="experience-image">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <ul class="responsibilities">
+                    <li>Optimized daily processes, saving 10 minutes per employee by automating email workflows.</li>
+                    <li>Revolutionized decision-making with a real-time dashboard, cutting task completion times by 15 minutes through automation.</li>
+                    <li>Boosted processing efficiency by 50 minutes daily with an automated invoice generator.</li>
+                    <li>Streamlined data management, reducing manual workloads and enhancing resource allocation.</li>
+                </ul>
+                <div class="learning-details">
+                    <p>
+                        Before my internship at XCMG India, I had no knowledge of VBA or how it worked in Excel. During the internship, 
+                        I realized that Excel was the backbone of operations, with <strong>90% of employees relying on it for daily tasks.</strong> Determined to contribute meaningfully,
+                        I taught myself Advanced Excel, VBA, and Excel Macros. As a result, I created a macro-based invoice generator that significantly reduced 
+                        work stress for employees in the stores department by automating repetitive tasks. This initiative streamlined processes,
+                        improved efficiency, and had a lasting positive impact on the organization.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="education-section">
+        <h2 class="section-title">Education</h2>
+        <div class="education-content">
+            <div class="education-card">
+                <div class="education-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h3>MBA in AI & Data Science</h3>
+                <p><strong>SRM University, KTR</strong></p>
+                <p>2023 - 2025</p>
+                <p>Percentage: 92%</p>
+                <ul>
+                    <li>Specializing in Artificial Intelligence and Data Science.</li>
+                    <li>Developing skills in advanced analytics, machine learning, and data-driven decision-making.</li>
+                </ul>
+            </div>
+            <div class="education-card">
+                <div class="education-icon">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <h3>Bachelor of Computer Applications</h3>
+                <p><strong>Sri Sankara Arts and Science College</strong></p>
+                <p>2020 - 2023</p>
+                <p>Percentage: 76%</p>
+                <ul>
+                    <li>Built a foundation in data analytics, programming, and statistical analysis.</li>
+                    <li>Graduated with strong academic performance and hands-on project experience.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="project" class="project">
+        <h2 class="section-title">Projects</h2>
+        
+        <div class="project-item">
+            <div class="project-image-container">
+                <div class="project-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+            </div>
+            <div class="project-details">
+                <h3>Fraud Detection Model in Banking</h3>
+                <p>Designed and implemented a machine learning model that achieved <strong>94% accuracy</strong> in detecting fraudulent transactions using a simulated banking dataset. This project mitigated monetary losses and preserved customer trust, earning <strong>2nd place</strong> in the VIT hackathon.</p>
+                <a href="https://github.com/jayaprakash7903" target="_blank" class="project-link">View Details</a>
+            </div>
+        </div>
+        
+        <div class="project-item">
+            <div class="project-image-container">
+                <div class="project-icon">
+                    <i class="fas fa-user-tie"></i>
+                </div>
+            </div>
+            <div class="project-details">
+                <h3>AI Candidate Evaluation Process</h3>
+                <p>Developed an advanced AI evaluation system that integrates <strong>sentiment analysis</strong>, <strong>emotional intelligence assessment</strong>, and <strong>resume filtering</strong>. This application improved sorting accuracy and reduced screening time by <strong>30%</strong>.</p>
+                <a href="https://github.com/jayaprakash7903" target="_blank" class="project-link">View Details</a>
+            </div>
+        </div>
+        
+        <div class="project-item">
+            <div class="project-image-container">
+                <div class="project-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+            </div>
+            <div class="project-details">
+                <h3>Demand Forecasting with ABC</h3>
+                <p>Designed a machine learning model for demand forecasting with ABC analysis to improve inventory management as part of ongoing research, 2024.</p>
+                <a href="https://github.com/jayaprakash7903" target="_blank" class="project-link">View Details</a>
+            </div>
+        </div>
+    
+        <div class="project-item">
+            <div class="project-image-container">
+                <div class="project-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+            </div>
+            <div class="project-details">
+                <h3>AI Email Classifier for Phishing Detection</h3>
+                <p>Developed an AI email classifier with 95% accuracy to detect phishing attempts, such as fraudulent insurance claims, protecting hospitals. Leveraged NLP, Bidirectional LSTM, and TensorFlow for real-time monitoring.</p>
+                <a href="https://github.com/jayaprakash7903" target="_blank" class="project-link">View Details</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="achievements" class="achievements">
+        <h2 class="section-title">Achievements & Awards</h2>
+        
+        <div class="achievement-item">
+            <div class="achievement-icon">
+                <i class="fas fa-trophy"></i>
+            </div>
+            <div class="achievement-text">
+                <h3>Runner-up in Datathon</h3>
+                <p>TechnoVIT, an international-level meet</p>
+                <span class="achievement-date">September 2024</span>
+            </div>
+        </div>
+        
+        <div class="achievement-item">
+            <div class="achievement-icon">
+                <i class="fas fa-medal"></i>
+            </div>
+            <div class="achievement-text">
+                <h3>2nd Place in National IIITDM Data Analytics Hackathon</h3>
+                <p>Out of 500 teams</p>
+                <span class="achievement-date">2024</span>
+            </div>
+        </div>
+        
+        <div class="achievement-item">
+            <div class="achievement-icon">
+                <i class="fas fa-code"></i>
+            </div>
+            <div class="achievement-text">
+                <h3>Completed 115/115 Python challenges on HackerRank</h3>
+                <p>Demonstrating expertise in coding and problem-solving</p>
+                <span class="achievement-date">2024</span>
+            </div>
+        </div>
+        
+        <div class="achievement-item">
+            <div class="achievement-icon">
+                <i class="fas fa-award"></i>
+            </div>
+            <div class="achievement-text">
+                <h3>Advanced to 2nd Round of Woodpecker Hackathon</h3>
+                <p>Selected as 1 of 300 teams from 13,000+ submissions</p>
+                <span class="achievement-date">2024</span>
+            </div>
+        </div>
+        
+        <div class="achievement-item">
+            <div class="achievement-icon">
+                <i class="fas fa-users"></i>
+            </div>
+            <div class="achievement-text">
+                <h3>Participated in Agam International Level Management Game</h3>
+                <p>Innovating AI HR among 100 teams</p>
+                <span class="achievement-date">2024</span>
+            </div>
+        </div>
+        
+        <div class="achievement-item">
+            <div class="achievement-icon">
+                <i class="fas fa-truck"></i>
+            </div>
+            <div class="achievement-text">
+                <h3>Developed ML model for HPCL</h3>
+                <p>Truck allocation optimization at Hindustan Petroleum Corporation Limited</p>
+                <span class="achievement-date">2024</span>
+            </div>
+        </div>
+        
+        <div class="achievement-item">
+            <div class="achievement-icon">
+                <i class="fas fa-table-tennis-paddle-ball"></i>
+            </div>
+            <div class="achievement-text">
+                <h3>4th Place in Badminton Tournament</h3>
+                <p>Madras University</p>
+                <span class="achievement-date">2021</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery">
+        <h2 class="section-title">My Gallery</h2>
+        <div class="gallery-container">
+            <div class="gallery-item">
+                <div class="gallery-placeholder">
+                    <i class="fas fa-image"></i>
+                    <p>VIT Datathon</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="gallery-placeholder">
+                    <i class="fas fa-image"></i>
+                    <p>IIITDM Hackathon</p>
+                </div>
+            </div>
+            <div class="gallery-item more-images">
+                <div class="gallery-placeholder">
+                    <i class="fas fa-image"></i>
+                    <p>HPCL Project</p>
+                </div>
+            </div>
+            <div class="gallery-item more-images">
+                <div class="gallery-placeholder">
+                    <i class="fas fa-image"></i>
+                    <p>Certificates</p>
+                </div>
+            </div>
+            <div class="gallery-item more-images">
+                <div class="gallery-placeholder">
+                    <i class="fas fa-image"></i>
+                    <p>Certificates</p>
+                </div>
+            </div>
+            <div class="gallery-item more-images">
+                <div class="gallery-placeholder">
+                    <i class="fas fa-image"></i>
+                    <p>Certificates</p>
+                </div>
+            </div>
+            <div class="gallery-item more-images">
+                <div class="gallery-placeholder">
+                    <i class="fas fa-image"></i>
+                    <p>Certificates</p>
+                </div>
+            </div>
+            <div class="gallery-item more-images">
+                <div class="gallery-placeholder">
+                    <i class="fas fa-image"></i>
+                    <p>Certificates</p>
+                </div>
+            </div>
+        </div>
+        <button class="show-more-btn" onclick="showMore()">Show More</button>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2 class="section-title">Contact Me</h2>
+        <p>If you have any questions, feel free to reach out!</p>
+        
+        <div class="contact-info">
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <div class="contact-details">
+                    <h3>Email</h3>
+                    <p>jayaprakashvelmurugan111@gmail.com</p>
+                </div>
+            </div>
+            
+            <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <div class="contact-details">
+                    <h3>Phone</h3>
+                    <p>+91 6369055342</p>
+                </div>
+            </div>
+            
+            <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <div class="contact-details">
+                    <h3>Location</h3>
+                    <p>Plot No. 11, Sadhavaram, Kancheepuram, Tamil Nadu, India</p>
+                </div>
+            </div>
+        </div>
+        
+        <form class="contact-form" action="https://formspree.io/f/xgvvvlze" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+        
+        <div class="socials">
+            <a href="https://www.linkedin.com/in/jayaprakash-v-33913a289/" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/jayaprakash7903" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <p>&copy; 2025 Jayaprakash V. All rights reserved.</p>
+    </footer>
+    
+    <script>
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuIcon = document.getElementById('menu-icon');
+            const navLinks = document.querySelector('.nav-links');
+            
+            if (menuIcon) {
+                menuIcon.addEventListener('click', function() {
+                    navLinks.classList.toggle('active');
+                });
+            }
+            
+            // Close mobile menu when clicking on a link
+            const links = document.querySelectorAll('.nav-links a');
+            links.forEach(link => {
+                link.addEventListener('click', function() {
+                    navLinks.classList.remove('active');
+                });
+            });
+            
+            // Contact form submission
+            const contactForm = document.querySelector('.contact-form');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    alert('Thank you for your message! I will get back to you soon.');
+                    contactForm.reset();
+                });
+            }
+        });
+
+        // Gallery show more functionality
+        function showMore() {
+            const moreImages = document.querySelectorAll('.more-images');
+            const showMoreBtn = document.querySelector('.show-more-btn');
+            
+            moreImages.forEach(image => {
+                if (image.style.display === 'flex') {
+                    image.style.display = 'none';
+                    showMoreBtn.textContent = 'Show More';
+                } else {
+                    image.style.display = 'flex';
+                    showMoreBtn.textContent = 'Show Less';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
